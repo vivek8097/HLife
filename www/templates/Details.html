@@ -1,0 +1,20 @@
+<ion-view title="Details" id="page9">
+  <ion-content padding="true" class="has-header">
+  
+   <div class="spacer" style="width: 300px; height: 18px;"></div>
+  		 <div class="doctor-image" >
+      <img src="{{doctor.img}}" style="display: block; width: 60%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <h2 style="color:#000000;font-weight:400;text-align:center;">{{doctor.firstName}} {{doctor.lastName}}</h2>
+    <h4 style="color:#000000;text-align:center;">{{doctor.email}}</h4>
+    <h4 style="color:#000000;text-align:center;">{{doctor.phone_no}}</h4>
+    <div class="spacer" style="width: 300px; height: 18px;"></div>
+    <div class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+      {{doctor.details |limitTo:1000}}
+       
+      </p>
+    </div>
+
+  </ion-content>
+</ion-view>

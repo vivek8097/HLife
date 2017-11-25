@@ -1,0 +1,51 @@
+<ion-view title="Check disease" id="page3">
+  <ion-content padding="true" class="has-header">
+
+
+  	 <!--<form role="form" name="uploadForm" ng-init="initCtrl()">
+    <div class="row">
+        <img ng-src="{{imageUrl}}" ng-show="imageUrl" />
+        <input id="fileInput" type="file" accept="*/*" ng-model="filename" />
+        <input type="button" value="x" class="delete-file" title="Delete file" ng-disabled="imageUrl" ng-click="deleteFile()" />{{imageUrl}}
+         <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="">
+          Chat
+        </ion-option-button>
+    </div>
+  </form>!-->
+
+    <form id="checkDisease-form4" class="list">
+      
+      <label class="item item-select" id="checkDisease-select3">
+        <span class="input-label">Date of  birth</span>
+        <select ng-model='selectedData.yearOfBirth' ng-options='yearOfBirth for yearOfBirth in data.years'>
+        </select>
+      </label>
+    </form>
+    <form id="checkDisease-form5" class="list">
+      <label class="item item-select" id="checkDisease-select3">
+        <span class="input-label">Gender</span>
+        <select ng-model='selectedData.gender' ng-options='gender.id as gender.label for gender in data.genders'>  
+        </select>
+      </label>
+      <label class="item item-select" id="checkDisease-select4">
+        <span class="input-label">Body Part</span>
+        <select ng-model="selectedData.symtomsLocation" ng-options='symtomsLocation.id as symtomsLocation.label for symtomsLocation in data.SymptomsLocations'>
+         
+        </select>
+      </label>
+       <label class="item item-select" id="checkDisease-select4">
+        <span class="input-label">Age Type</span>
+        <select ng-model="selectedData.selectorStatus" ng-options='selectorStatus.id as selectorStatus.label for selectorStatus in data.selectorStatus'>
+         
+        </select>
+      </label>
+    </form>
+  
+<a href="#/check/{{selectedData.symtomsLocation}}">
+    <button class="button button-positive  button-block">Load Symptoms</button>
+</a>
+
+  </ion-content>
+</ion-view>

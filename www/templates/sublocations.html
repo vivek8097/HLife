@@ -1,0 +1,15 @@
+<ion-view title="Sublocations" id="page67">
+  <ion-content padding="true" class="has-header">
+  <div ng-init="loadToken()"> 
+    <label class="item item-select" id="checkDisease-select4">
+        <span class="input-label">Body Sublocation Part</span>
+        <select ng-model="sublocationData.sublocation" ng-options="sublocation.ID as sublocation.Name for sublocation in data.bodySublocations">
+        </select>
+      </label>
+      <p>{{sublocationData.sublocation}}</p>
+      <a href="#/check/{{data.locationId}}/{{sublocationData.sublocation}}/{{data.selectorStatus}}">
+       <button class="button button-positive  button-block">Load Sublocations Symptoms</button>
+       </a>
+       </div>
+  </ion-content>
+</ion-view>

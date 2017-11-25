@@ -1,0 +1,37 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button></ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="side-menu21"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left" id="side-menu21">
+    <ion-content padding="true" style="top:0px !important;" class="side-menu-left side-menu-gradient">
+      <div class="spacer" style="width: 268px; height: 48px;"></div>
+      <div class="profile-image">
+        <img src="img/nope" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;" gravatar-src="vm.email" gravatar-size="200">
+      </div>
+      <div ng-init="onGetData()">
+      <h3 id="menu-heading1" style="color:#F0E3E3;font-weight:300;text-align:center;">{{vm.username}}</h3>
+      </div>
+      <div class="spacer" style="width: 268px; height: 30px;"></div>
+      <ion-list id="menu-list1" class="manual-list-fullwidth">
+        <ion-item class="item-icon-left  side-menu-item" id="menu-list-item1" ui-sref="menu.home" menu-close="" active-page-highlight="">
+          <i class="icon ion-ios-home-outline"></i>Home</ion-item>
+        <ion-item class="item-icon-left  side-menu-item" id="menu-list-item2" ui-sref="menu.searchDisease" menu-close="" active-page-highlight="">
+          <i class="icon ion-ios-search"></i>Search disease</ion-item>
+        <ion-item class="item-icon-left  side-menu-item" id="menu-list-item3" ui-sref="menu.checkDisease" menu-close="" active-page-highlight="">
+          <i class="icon ion-android-checkmark-circle"></i>Check disease</ion-item>
+           <ion-item class="item-icon-left  side-menu-item" id="menu-list-item3" ui-sref="menu.doctors" menu-close="" active-page-highlight="">
+          <i class="icon ion-ios-person"></i>Doctors</ion-item>
+        <ion-item class="item-icon-left  side-menu-item" id="menu-list-item4" ui-sref="menu.contact" menu-close="" active-page-highlight="">
+          <i class="icon ion-ios-settings"></i>Contact us</ion-item>
+        <ion-item class="item-icon-left  side-menu-item" id="menu-list-item5" active-page-highlight="" ng-click="logout()">
+          <i class="icon ion-log-out"></i>Logout</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,22 @@
+<ion-view title="Doctors" id="page8">
+    <ion-subheader class="bar bar-subheader item-input-inset bar-light">
+        <label class="item-input-wrapper">
+       <i class="icon ion-search placholder-icon"></i>
+       <input type="search" ng-model="query" placeholder="Search">
+    </label>
+    </ion-subheader>
+    <ion-content padding="true" class="has-subheader">
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="data in doctor" type="item-text-wrap" href="#/doctors/{{data.id}}">
+                <img ng-src="{{data.img}}">
+                <h2>{{data.firstName}} {{data.lastName}}</h2>
+                <p>{{doctor.details}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+
+                <ion-option-button class="button-assertive" ng-click="">
+                    Chat
+                </ion-option-button>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

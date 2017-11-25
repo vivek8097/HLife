@@ -1,0 +1,19 @@
+<ion-view title="Diagnosis" id="page78">
+  <ion-content padding="true" class="has-header">
+  <div ng-init="loadToken()">
+     <ion-list>
+            <ion-item class="" ng-repeat="data in data.diagnoseResult track by $index" type="item-text-wrap" href="">
+                <h2>{{data.Issue.Name}}</h2><br />
+                <h2>Specilisation:-</h2>
+                <ul>
+                	<li ng-repeat=" data in data.Specialisation">
+                		<p>{{data.Name}}</p>
+                    <p>{{data.error}}</p>
+                	</li>
+                </ul>
+
+                
+        </ion-list>
+        </div>
+  </ion-content>
+</ion-view>

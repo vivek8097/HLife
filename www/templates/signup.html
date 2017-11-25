@@ -1,0 +1,66 @@
+<ion-view title="Signup" hide-nav-bar="true" cache-view="false" nav-transition="none" id="page7">
+    <ion-content padding="true" class="manual-ios-statusbar-padding" scroll="false">
+        <div id="signup-markdown2" ng-if="vm.error" class="show-list-numbers-and-dots error-box">
+            <p style="color:#000000;">{{vm.error}}</p>
+        </div>
+        <form id="signup-form2" class="list center-form">
+            <div>
+                <img src="img/z0E5i9HdSxOjQOtNUgP1_hospital.png" style="display: block; width: 30%; height: auto; margin-left: auto; margin-right: auto;">
+            </div>
+            <div class="list">
+                <div class="row">
+                    <div class="col">
+                        <label class="item item-input">
+              <input id="email" name="email" type="email" placeholder="Email"
+                     ng-model="vm.email">
+            </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="item item-input">
+              <input id="firstname" name="firstname" type="text" placeholder="Firstname"
+                     ng-model="vm.firstName">
+            </label>
+                    </div>
+                    <div class="col">
+                        <label class="item item-input">
+              <input id="username" name="lastname" type="text" placeholder="Lastname"
+                     ng-model="vm.lastName">
+            </label>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col">
+
+                        <label class="item item-input">
+              <input id="password" name="password" type="password" placeholder="Password"
+                     ng-model="vm.password">
+            </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+
+                        <label class="item item-input">
+                         <input id="again" name="again" type="password" placeholder="Confirm password"
+                     ng-model="vm.again">
+            </label>
+                    </div>
+
+                </div>
+                <label class="item item-select">
+            <span class="input-label">Select</span>
+            <select ng-model="vm.type">
+              <option>Doctor</option>
+              <option>User</option>
+            </select>
+        </label>
+
+                <button id="signup-button3" ng-click="signup()" class="button button-stable  button-block">Signup</button>
+                <a ui-sref="login" id="signup-button4" class="button button-positive  button-block button-clear">Or already have account??</a>
+        </form>
+    </ion-content>
+</ion-view>

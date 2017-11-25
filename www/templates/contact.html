@@ -1,0 +1,20 @@
+<ion-view title="Contact" id="page4">
+  <ion-content padding="true" class="has-header">
+  	
+  	 <div id="contactUs-container1">
+      <form id="contactUs-form8" class="list">
+        <label class="item item-input" id="contactUs-input8">
+          <input type="text" placeholder="Enter Name" ng-model="data.name">
+        </label>
+        <label class="item item-input" id="contactUs-input9">
+          <input type="text" placeholder="Enter E-mail Id" ng-model="data.email">
+        </label>
+      </form>
+    </div>
+    <form id="contactUs-form9" class="list">
+      <label class="item item-input comment-area" id="contactUs-textarea1">
+        <span class="input-label"></span><textarea placeholder=" Enter Message" ng-model="data.message"></textarea></label>
+      <button id="contactUs-button12" ng-click="send()" class="button button-positive  button-block">Submit</button>
+    </form>
+  </ion-content>
+</ion-view>

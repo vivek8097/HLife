@@ -1,0 +1,28 @@
+<ion-view title="Login" hide-nav-bar="true" cache-view="false" nav-transition="none" id="page6">
+  <ion-content padding="true" class="manual-ios-statusbar-padding" scroll="false">
+    <div id="login-markdown1" ng-if="vm.error" class="show-list-numbers-and-dots error-box">
+      <p style="color:#000000;">{{vm.error}}</p>
+    </div>
+    <form id="login-form1" class="list center-form">
+      <div>
+        <img src="img/z0E5i9HdSxOjQOtNUgP1_hospital.png" style="display: block; width: 30%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <ion-list id="login-list2">
+        <label class="item item-input top-input" id="login-input1">
+          <input type="text" placeholder="Email" ng-model="vm.email">
+        </label>
+        <label class="item item-input bottom-input" id="login-input2">
+          <input type="password" placeholder="Password" ng-model="vm.password">
+        </label>
+      </ion-list>
+      <div class="spacer" style="width: 300px; height: 26px;"></div>
+      <button id="login-button1" ng-click="signin()" class="button button-stable  button-block">Log in</button>
+      <a ui-sref="signup" id="login-button2" class="button button-positive  button-block button-clear">Or create an account</a>
+      <div id="login-button-bar1" class="button-bar">
+        <button id="login-button8" class="button button-positive  button-block button button-positive icon-left ion-social-facebook" ng-click="socialSignin('facebook')">Facebook</button>
+        <button id="login-button9" class="button button-positive  button-block button button-dark icon-left ion-social-facebook ion-social-github" ng-click="socialSignin('github')">Github</button>
+        <button id="login-button10" class="button button-positive  button-block button button-assertive icon-left ion-social-googleplus" ng-click="socialSignin('google')">Google</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

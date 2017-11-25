@@ -1,0 +1,16 @@
+<ion-view title="Search disease" id="page2">
+<div ng-init="loadToken()">
+   <ion-subheader class="bar bar-subheader item-input-inset bar-light">
+        <label class="item-input-wrapper">
+       <i class="icon ion-search placholder-icon"></i>
+       <input type="search" ng-model="query" placeholder="Search">
+    </label>
+    </ion-subheader>
+    <ion-content padding="true" class="has-subheader">
+        <ion-list>
+            <ion-item  type="item-text-wrap" ng-repeat="data in data.issue|filter:query" href="#/search/{{data.ID}}">
+                <h2>{{data.Name}}</h2>
+        </ion-list>
+  </ion-content>
+  </div>
+</ion-view>

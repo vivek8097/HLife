@@ -1,0 +1,23 @@
+<ion-view title="Sublocation Symptoms" id="page67">
+<div ng-init="loadToken()">
+  <ion-subheader class="bar bar-subheader item-input-inset bar-light">
+        <label class="item-input-wrapper">
+       <i class="icon ion-search placholder-icon"></i>
+       <input type="search" ng-model="query" placeholder="Search">
+    </label>
+    </ion-subheader>
+    <ion-content padding="true" class="has-subheader">
+        <div class="list" ng-repeat="data in
+        data.bodySublocationSymptoms |filter:query">
+        
+        <ion-checkbox ng-model="active"  ng-change="change(data.ID,active)">
+          {{ data.Name }}
+        </ion-checkbox>
+        </div>
+      <a href="#/check/{{data.locaionId}}/{{data.sublocationId}}/{{data.selectorStatus}}/{{data.gender}}/{{data.selectedSymptoms}}/{{data.yearofbirth}}">
+      <button class="button button-positive  button-block">Diagonsis</button>
+      </a>
+       
+  </ion-content>
+  </div>
+</ion-view>
